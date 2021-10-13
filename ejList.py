@@ -31,15 +31,21 @@ while True:
             theList.pop(pos)
     elif option == 6:
         num = int(input("Input the number"))
-        print(num, theList.count)
+        print(num, theList.count(1))
     elif option == 7:
         num = int(input("Input the number"))
-        index = 1
+        pos = 0
+        for elem in range(0,theList.count(num)):
+            index = theList.index(num,pos)
+            print(index, end=" ")
+            pos = index + 1
+        print()
+        """index = 1
         for elem in theList:
             if elem == num:
                 print(index, end=" ")
             index += 1
-        print()    
+        print()"""    
     elif option == 8:
         for elem in theList:
             print(elem,end=" ")
